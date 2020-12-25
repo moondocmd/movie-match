@@ -1,3 +1,7 @@
+body{
+  background-color: lightgray;
+}
+
 .container{
   width: 75%;
   margin: 0 auto;
@@ -10,6 +14,7 @@
   grid-gap: 20px;
   margin-top: 30px;
   padding-bottom: 50px;
+  
 }
 
 .ui.borderless.main.menu  {
@@ -18,4 +23,15 @@
 
 #movieForm{
   margin-left: 75px;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 650px) {
+  #movieForm{
+    margin: 0px;
+  }
+  .ui.borderless.main.menu  {
+    display: block;
+  }
+  
 }
