@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   searchMovie(){ 
-    axios.get(`https://tastedive.com/api/similar?q=${this.state.query}&&verbose=1`).then(response =>{
+    axios.get(`https://thingproxy.freeboard.io/fetch/https://tastedive.com/api/similar?q=${this.state.query}&&verbose=1`).then(response =>{
       const movies = response.data;
       console.log(movies.Similar.Info[0].Name);
       this.setState({ movies: movies.Similar.Results })
