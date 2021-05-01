@@ -20,8 +20,8 @@ class App extends React.Component {
     this.setState( { query: mov }, () => { this.searchMovie() });
   }
 
-  searchMovie(){
-    axios.get(`https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${this.state.query}&&verbose=1`).then(response =>{
+  searchMovie(){ 
+    axios.get(`https://tastedive.com/api/similar?q=${this.state.query}&&verbose=1`).then(response =>{
       const movies = response.data;
       console.log(movies.Similar.Info[0].Name);
       this.setState({ movies: movies.Similar.Results })
